@@ -1,0 +1,89 @@
+//变量 variables
+$logo-width: 100px;
+.both-navs{
+  width:100%;
+}
+
+.top-nav-wrapper{
+  width:100%;
+  .top-nav{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:2em 2em 0px 2em;
+    max-width: 480px;
+    margin:0px auto;
+    box-sizing: border-box;
+    img{
+      display: inline-block;
+      width:$logo-width;
+      fill:white;
+    }
+  }
+}
+.sticky-top-nav-wrapper{
+  width: 100%;
+  position:fixed;
+  top:-100px;
+  z-index: 2;
+  margin:0px auto;
+  padding:2em 0px;
+  text-align: center;
+  transition: top 0.2s ease-in-out;
+  .top-nav{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    max-width:480px;
+    box-sizing: border-box;
+    img{
+      display: none;
+    }
+    .work-with-us-button{
+      display: inline;
+      font-size: 12px;
+      margin:0px auto;
+    }
+
+  }
+  &.belowHero{
+    top:0px;
+  }
+}
+
+//电脑的布局 desktop layout
+@media only screen and (min-width: 715px){
+  .top-nav-wrapper{
+    .top-nav{
+      max-width: 1300px;
+      img{
+        display: inline-block;
+        width:$logo-width;
+        fill:white;
+      }
+      .work-with-us-button{
+        font-size: 10px;
+      }
+    }
+  }
+  .sticky-top-nav-wrapper{
+    background-color: white;
+    padding:1em 0px;
+    .top-nav{
+      max-width:1300px;
+      margin:0px auto;
+      padding: 0px 2em;
+      img{
+        display: block;
+        width:70px;
+      }
+      .work-with-us-button{
+        font-size: 12px;
+        color:white;
+        background-color: #000;
+        margin:0px;
+      }
+    }
+  }
+
+}

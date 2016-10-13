@@ -1,0 +1,108 @@
+
+//Variables
+$gutter: 20px;
+
+//Global
+html, body{
+  height: 100%;
+  width:100%;
+  background: #efefec;
+  font-family: 'Arial';
+  font-size: 14px;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+li{
+  list-style: none;
+  display: inline;
+  margin-right: 10px;
+}
+
+h1{
+  font-size: calc(66px/1.5);
+  line-height: calc(75px/1.5);
+  font-weight: bold;
+  color: white;
+  margin: 0px;
+}
+h2{
+  font-size: 32px;
+  line-height: 40px;
+  font-family: 'Georgia', sans-serif;
+  font-weight: normal;
+  margin: 1em 0px;
+  &.card-detail{
+    font-size: 24px;
+  }
+}
+h3{
+  font-size: calc(14px*1.5);
+  line-height: calc(18px*1.5);
+  font-family: sans-serif;
+  font-weight: bold;
+  margin-top: 2em;
+}
+p{
+  font-size: calc(14px*1.5);
+  line-height: calc(18px*1.5);
+  color: #333;
+  margin-top: 1em;
+}
+a{
+  text-decoration: none;
+}
+.work-with-us-button{
+  background-color:white;
+  color: black;
+  border-radius: 25px;
+  font-size: 7px;
+  padding:1em 2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+//Application
+#app{
+  background-color: #efefec;
+  .app-content-wrapper{
+    max-width:480px;
+    margin:0px auto;
+  }
+}
+
+//电脑的布局。 Desktop styles
+@media only screen and (min-width: 715px){
+  h1{
+    font-size: calc(66px);
+    line-height: calc(75px);
+    font-weight: bold;
+    color: white;
+  }
+  h2{
+    font-size: calc(32px);
+    line-height: calc(40px);
+    font-family: 'Georgia', sans-serif;
+    font-weight: normal;
+    margin: 0px;
+  }
+  h3{
+    font-size: calc(14px);
+    line-height: calc(18px);
+    font-family: sans-serif;
+    font-weight: bold;
+    margin: 0px;
+  }
+  p{
+    font-size: calc(14px);
+    line-height: calc(18px);
+    color: #333;
+    margin-top: 1em;
+  }
+  #app{
+    .app-content-wrapper{
+        max-width:1300px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>TechUXRecruitingSite</id>
+    <version>1.0.0</version>
+    <authors>Alex Zito-Wolf, Dwight Biddle, Rob Whalley, Michael Ackerson, Natasha Franks, Christian Gilbert, Liz DiMascio</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Landing page for prospective new hires before redirecting to the careers.ef.com site</description>
+  </metadata>
+  <files>
+    <file src="..\dist\**\*.*" target="" />
+  </files>
+</package>

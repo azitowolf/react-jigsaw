@@ -1,0 +1,58 @@
+.hero-container {
+  position: relative;
+  background-size: cover;
+  background: url("../images/Desktop/HeroArtwork/dark-hills.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  .hero{
+    max-width: 480px;
+    margin:0px auto;
+  }
+  .hero-body{
+    padding:15em 1em;
+    color:white;
+    text-align: left;
+  }
+  .hero-subheader{
+    font-family: "Arial", neue;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 1em 0px;
+  }
+  .work-with-us-button{
+    font-size: 12px;
+    margin-bottom: 3em;
+    display: inline-block;
+  }
+}
+
+//片剂的布局 tablet style overwrites
+@media only screen and (min-width: 715px) {
+  .hero-container {
+    background: url("../images/Desktop/HeroArtwork/dark-hills.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .hero{
+      max-width: 1300px;
+      margin: 0px auto;
+      height:100%;
+    }
+    .hero-body{
+      padding:35em 1em 1em 28px;
+    }
+    .hero-text{
+      color:white;
+      text-align: left;
+    }
+  }
+}
+
+//电脑的布局 desktop layout
+@media only screen and (min-width: 1050px){
+  .hero {
+    .hero-body{
+      padding:12em 0px 10em 50%;
+    }
+  }
+}

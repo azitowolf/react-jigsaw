@@ -1,0 +1,112 @@
+
+//手机的布局 mobile layout
+.footer-wrapper {
+  position: relative;
+  background-color: #abd6cd;
+  padding:5em 0px 10em 0px;
+
+  .footer-component{
+    max-width: 480px;
+    margin:0px auto;
+    text-align: center;
+    h2{
+      color: black;
+      margin: 0px;
+    }
+    h3{
+      color: black;
+      font-weight: normal;
+      font-size: 14px;
+      margin: 0px 2em 3em 2em;
+    }
+    .work-with-us-button{
+      font-size: 10px;
+      a{
+        color: black;
+      }
+    }
+
+    //这个菜好吃的
+    .footer-job-categories{
+      display: flex;
+      flex-direction: column;
+      ul{
+        padding:0px;
+        text-align: center;
+        margin-bottom: 2em;
+        font-weight: bold;
+        li{
+          display: block;
+          text-decoration: none;
+          &.job-category{
+            color:black;
+            margin-bottom: 1em;
+          }
+          .footer-link{
+            cursor: pointer;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+.copyright{
+  text-align: center;
+  position: relative;
+  background-color: #2d2c2c;
+  font-weight: bold;
+  color: white;
+  width:100%;
+  padding: 4em 0px;
+  &:before{
+    content:"";
+    width:100px;
+    height:110px;
+    background-image: url("../images/Desktop/Hikers.png");
+    position: absolute;
+    top: -79px;
+    left: 50%;
+    margin-left: -50px;
+  }
+}
+
+//片剂的布局 tablet style overwrites
+@media only screen and (min-width: 715px){
+  .footer-wrapper{
+    h2{
+      margin: auto;
+    }
+    .footer-component{
+      max-width: 1300px;
+
+      .footer-job-categories{
+        flex-direction: row !important;
+        justify-content: center;
+        ul{
+          width:30%;
+          li{
+            &.job-category{
+              margin-bottom: 2em;
+            }
+          }
+        }
+      }
+    }
+    .work-with-us-button{
+      font-size: 8px;
+    }
+  }
+}
+
+//电脑的布局 desktop layout
+@media only screen and (min-width: 950px){
+  .footer-component{
+    .footer-job-categories ul{
+      width: 25%;
+    }
+    .work-with-us-button{
+      font-size: 10px;
+    }
+  }
+}
