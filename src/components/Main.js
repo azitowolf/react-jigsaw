@@ -21,7 +21,6 @@ import React from 'react';
 import HeroComponent from './HeroComponent';
 
 import PrimaryContentSection from './PrimaryContentSection';
-import ContentSection from './ContentSectionComponent';
 import Footer from './FooterComponent';
 import Overlay from './OverlayComponent';
 

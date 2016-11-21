@@ -13,6 +13,10 @@
     justify-content: flex-end;
   }
 
+  &.reverse{
+    text-align:right;
+  }
+
   //general styles
   span{
     padding: 0 1em;
