@@ -3,7 +3,7 @@
 .footer-wrapper {
   position: relative;
   background-color: #abd6cd;
-  padding:5em 0px 10em 0px;
+  padding:5em 0px;
 
   .footer-component{
     max-width: 480px;
@@ -27,7 +27,7 @@
     }
 
     //这个菜好吃的
-    .footer-job-categories{
+    .footer-categories{
       display: flex;
       flex-direction: column;
       ul{
@@ -38,7 +38,7 @@
         li{
           display: block;
           text-decoration: none;
-          &.job-category{
+          &.category{
             color:black;
             margin-bottom: 1em;
           }
@@ -59,16 +59,6 @@
   color: white;
   width:100%;
   padding: 4em 0px;
-  &:before{
-    content:"";
-    width:100px;
-    height:110px;
-    background-image: url("../images/Desktop/Hikers.png");
-    position: absolute;
-    top: -79px;
-    left: 50%;
-    margin-left: -50px;
-  }
 }
 
 //片剂的布局 tablet style overwrites
@@ -80,13 +70,13 @@
     .footer-component{
       max-width: 1300px;
 
-      .footer-job-categories{
+      .footer-categories{
         flex-direction: row !important;
         justify-content: center;
         ul{
           width:30%;
           li{
-            &.job-category{
+            &.category{
               margin-bottom: 2em;
             }
           }
@@ -102,7 +92,7 @@
 //电脑的布局 desktop layout
 @media only screen and (min-width: 950px){
   .footer-component{
-    .footer-job-categories ul{
+    .footer-categories ul{
       width: 25%;
     }
     .work-with-us-button{

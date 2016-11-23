@@ -14,18 +14,18 @@ class FooterComponent extends React.Component {
         <div className="footer-component">
           <h2 className="footer-title">{source.footer.title}</h2>
           <h3>{source.footer.text}</h3>
-          <div className="footer-job-categories">
+          <div className="footer-categories">
             <ul>
-              <li className="job-category">{source.footer.roles[0].text}</li>
-              <li className="footer-link"><btn className="work-with-us-button"><a href={source.footer.roles[0].link} target="blank" data-target="tech-ux-roles">{source.footer.roles[0].title}</a></btn></li>
+              <li className="category">{source.footer.categories[0].text}</li>
+              <li className="footer-link"><btn className="work-with-us-button"><a href={source.footer.categories[0].link} target="blank" data-target="tech-ux-roles">{source.footer.categories[0].title}</a></btn></li>
             </ul>
             <ul>
-              <li className="job-category">{source.footer.roles[1].text}</li>
-              <li className="footer-link"><btn className="work-with-us-button"><a href={source.footer.roles[1].link} target="blank" data-target="tech-developer-roles">{source.footer.roles[1].title}</a></btn></li>
+              <li className="category">{source.footer.categories[1].text}</li>
+              <li className="footer-link"><btn className="work-with-us-button"><a href={source.footer.categories[1].link} target="blank" data-target="tech-developer-roles">{source.footer.categories[1].title}</a></btn></li>
             </ul>
             <ul>
-              <li className="job-category">{source.footer.roles[2].text}</li>
-              <li className="footer-link"><btn className="work-with-us-button"><a href={source.footer.roles[2].link} target="blank" data-target="tech-product-roles">{source.footer.roles[2].title}</a></btn></li>
+              <li className="category">{source.footer.categories[2].text}</li>
+              <li className="footer-link"><btn className="work-with-us-button"><a href={source.footer.categories[2].link} target="blank" data-target="tech-product-roles">{source.footer.categories[2].title}</a></btn></li>
             </ul>
           </div>
         </div>

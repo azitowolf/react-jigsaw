@@ -20,9 +20,11 @@ require('zenscroll');
 import React from 'react';
 import HeroComponent from './HeroComponent';
 
+import NavComponent from './NavComponent';
 import PrimaryContentSection from './PrimaryContentSection';
 import Footer from './FooterComponent';
 import Overlay from './OverlayComponent';
+import Slider from './SliderComponent';
 
 var jsonSource = {
   header: "React Jigsaw",
@@ -141,23 +143,22 @@ var jsonSource = {
   footer: {
     title: "Join our team",
     text: "From UX designers to developers, we're always on the lookout for talented people with all levels of experience.",
-    cta: "View UX positions",
-    copyright: "&copy; EF Education First International Ltd.",
-    roles: [
+    copyright: "&copy; azitowolf <br/> http://alexzitowolf.com",
+    categories: [
       {
         title: "View UX Jobs",
         text: "Create holistic user-centric design",
-        link: "http://careers.ef.com/search/#?c=creative&l=boston-usa"
+        link: "http://alexzitowolf.com"
       },
       {
         title: "View Tech Jobs",
         text: "Write clean sustainable code",
-        link: "http://careers.ef.com/search/#?c=technology&l=boston-usa"
+        link: "http://alexzitowolf.com"
       },
       {
         title: "View Product Jobs",
         text: "Implement insightful product management",
-        link: "http://careers.ef.com/search/#?c=technology&l=boston-usa"
+        link: "http://alexzitowolf.com"
       }
     ]
   }
@@ -181,12 +182,18 @@ class AppComponent extends React.Component {
   render() {
     var screenWidth = window.innerWidth;
     var isMobile = screenWidth > 480 ? false : true;
+    var overlay = this.state.overlayActive ?
+      <Overlay overlayText={this.state.text} isMobile={isMobile} toggleOverlay={this.toggleOverlay} /> : '';
 
     return (
       <div className="app-wrapper">
-        {this.state.overlayActive ? <Overlay overlayText={this.state.text} isMobile={isMobile} toggleOverlay={this.toggleOverlay} /> : ''}
+        {overlay}
+        
         <HeroComponent isMobile={isMobile} problemsJson={jsonSource}/>
+
+
         <div className="app-content-wrapper">
+          <Slider problemsJson={jsonSource} />
           <PrimaryContentSection isMobile={isMobile} problemsJson={jsonSource} toggleOverlay={this.toggleOverlay} />
         </div>
         <Footer isMobile={isMobile} problemsJson={jsonSource}/>
